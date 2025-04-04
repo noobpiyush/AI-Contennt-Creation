@@ -27,12 +27,7 @@ export default function RootLayout({
   return (
    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT_ID}
-          strategy="beforeInteractive"
-        />
+      <AdSense pId={`${process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT_ID}`} />
       </head>
       <body>
         <ThemeProvider
