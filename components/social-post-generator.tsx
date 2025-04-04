@@ -38,7 +38,7 @@ export default function SocialPostGenerator() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/generate/social-post",
+        "/api/generate/social-post",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
