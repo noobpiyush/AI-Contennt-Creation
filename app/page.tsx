@@ -13,14 +13,12 @@ import {
   VideoIcon,
   MessageSquareTextIcon,
   SparklesIcon,
-  DollarSign,
 } from "lucide-react";
 import DashboardHeader from "@/components/dashboard-header";
 import ImageGenerator from "@/components/image-generator";
 import VideoGenerator from "@/components/video-generator";
 import SocialPostGenerator from "@/components/social-post-generator";
-import Link from "next/link";
-import AdUnit from "@/components/ad-unit";
+
 import { AD } from "@/components/ads";
 import AdBanner from "@/components/AdBanner";
 
