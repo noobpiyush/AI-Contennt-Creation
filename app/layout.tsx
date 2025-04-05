@@ -27,17 +27,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider
-         attribute="class"
-         defaultTheme="dark"
-         enableSystem
-         disableTransitionOnChange
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
       >
-      <head>
-        <AdSense pId={`${process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT_ID}`} />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      {children}
-      </body>
+        <head>
+          <AdSense pId={`${process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT_ID}`} />
+        </head>
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          {children}
+        </body>
       </ThemeProvider>
     </html>
   );

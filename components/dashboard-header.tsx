@@ -66,7 +66,7 @@ export default function DashboardHeader() {
         </div>
         <div>
           <nav className="flex items-center gap-2 text-sm font-medium ">
-          <ThemeToggle/>
+            <ThemeToggle />
           </nav>
         </div>
       </div>

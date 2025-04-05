@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import ReactMarkdown from "react-markdown";
 import {
   Select,
@@ -38,7 +39,7 @@ export default function SocialPostGenerator() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/generate/social-post",
+        "/api/generate/social-post",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
