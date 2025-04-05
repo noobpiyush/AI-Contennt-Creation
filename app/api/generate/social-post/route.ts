@@ -23,8 +23,7 @@ export async function POST(request: NextRequest) {
       Suggest a creative, trending content idea based on the topic: "${body.prompt}". 
       The output should include:
       - A catchy title or hook
-      - A brief description of the post or video
-      - Relevant hashtags
+      - A short description of the post or video
       - Tips to increase engagement (optional)
   
       Keep it concise and platform-agnostic unless a specific platform is mentioned in the prompt.
