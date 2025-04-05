@@ -18,9 +18,28 @@ import DashboardHeader from "@/components/dashboard-header";
 import ImageGenerator from "@/components/image-generator";
 import VideoGenerator from "@/components/video-generator";
 import SocialPostGenerator from "@/components/social-post-generator";
-
+import type { Metadata } from "next"
 import { AD } from "@/components/ads";
 import AdBanner from "@/components/AdBanner";
+
+export const metadata: Metadata = {
+  title: "AI Content Studio - Generate Professional Content with AI",
+  description:
+    "Create stunning images, videos, and social media posts with AI. Our platform helps content creators and marketers generate professional content in seconds.",
+  openGraph: {
+    title: "AI Content Studio - Generate Professional Content with AI",
+    description:
+      "Create stunning images, videos, and social media posts with AI. Our platform helps content creators and marketers generate professional content in seconds.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Content Studio Dashboard",
+      },
+    ],
+  },
+}
 
 export default function Home() {
   return (

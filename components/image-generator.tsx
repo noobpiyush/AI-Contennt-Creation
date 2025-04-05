@@ -31,6 +31,40 @@ export default function ImageGenerator() {
   const [generatedImage, setGeneratedImage] = useState("");
   const [imageDescription, setImageDescription] = useState("");
 
+  function handleDownload(imageUrl: string) {
+    // Check if the image is a base64 string
+    if (imageUrl.startsWith('data:')) {
+      // Create a new anchor element
+      const link = document.createElement('a');
+      
+      // Set the href attribute to the image URL
+      link.href = imageUrl;
+      
+      // Set the download attribute to the desired file name
+      link.download = 'downloaded_image.png'; // You can customize the file name
+      
+      // Append the link to the document body
+      document.body.appendChild(link);
+      
+      // Trigger a click event on the link
+      link.click();
+      
+      // Remove the link from the document body
+      document.body.removeChild(link);
+    } else {
+      // If it's a regular URL, use the same logic
+      console.log("regular");
+      
+      const link = document.createElement('a');
+      link.href = imageUrl;
+      link.download = 'downloaded_image.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  
+    }
+  }
+
   const handleGenerate = async () => {
     if (!prompt) {
       toast({
@@ -230,13 +264,11 @@ export default function ImageGenerator() {
 
             {generatedImage && (
               <div className="flex gap-2">
-                <Button variant="outline" className="flex-1">
+                <Button
+                  onClick={() => handleDownload(generatedImage)}
+                   variant="outline" className="flex-1">
                   <Download className="mr-2 h-4 w-4" />
                   Download
-                </Button>
-                <Button variant="outline" className="flex-1">
-                  <Share className="mr-2 h-4 w-4" />
-                  Share
                 </Button>
               </div>
             )}
