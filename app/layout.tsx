@@ -25,20 +25,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem
-        disableTransitionOnChange
-      >
-        <head>
-          <AdSense pId={`${process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT_ID}`} />
-        </head>
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+   <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+      <AdSense pId={`${process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT_ID}`} />
+      </head>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
