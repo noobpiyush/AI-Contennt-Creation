@@ -30,7 +30,7 @@ export default function DashboardHeader() {
                 <Link href="/" className="hover:text-foreground/80">
                   Dashboard
                 </Link>
-                <Link href="/templates" className="hover:text-foreground/80">
+                {/* <Link href="/templates" className="hover:text-foreground/80">
                   Templates
                 </Link>
                 <Link href="/projects" className="hover:text-foreground/80">
@@ -41,7 +41,7 @@ export default function DashboardHeader() {
                 </Link>
                 <Link href="/settings" className="hover:text-foreground/80">
                   Settings
-                </Link>
+                </Link> */}
               </nav>
             </SheetContent>
           </Sheet>
@@ -53,7 +53,7 @@ export default function DashboardHeader() {
             <Link href="/" className="hover:text-foreground/80">
               Dashboard
             </Link>
-            <Link href="/templates" className="hover:text-foreground/80">
+            {/* <Link href="/templates" className="hover:text-foreground/80">
               Templates
             </Link>
             <Link href="/projects" className="hover:text-foreground/80">
@@ -61,7 +61,7 @@ export default function DashboardHeader() {
             </Link>
             <Link href="/ads" className="hover:text-foreground/80">
               Google Ads
-            </Link>
+            </Link> */}
           </nav>
         </div>
         <div>
